@@ -6,7 +6,7 @@ package pro.pawelczyk.pppetclinic.model;
  * created Person in pro.pawelczyk.pppetclinic.model
  * in project pp-pet-clinic
  */
-public class Person {
+public class Person extends BaseEntity{
     private String firstName;
     private String lastName;
 

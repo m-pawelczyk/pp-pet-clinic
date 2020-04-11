@@ -8,7 +8,7 @@ import java.time.LocalDate;
  * created Pet in pro.pawelczyk.pppetclinic.model
  * in project pp-pet-clinic
  */
-public class Pet {
+public class Pet extends BaseEntity {
     private PetType petType;
     private Owner owner;
     private LocalDate birthDate;

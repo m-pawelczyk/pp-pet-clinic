@@ -6,5 +6,5 @@ package pro.pawelczyk.pppetclinic.model;
  * created PetType in pro.pawelczyk.pppetclinic.model
  * in project pp-pet-clinic
  */
-public class PetType {
+public class PetType extends BaseEntity{
 }
