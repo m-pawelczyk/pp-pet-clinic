@@ -14,14 +14,14 @@
     </parent>
     <groupId>pro.pawelczyk</groupId>
     <artifactId>pp-pet-clinic</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>pp-pet-clinic</name>
     <description>My Pet Clinic implementation (Spring 5 JAVA app example)</description>
 
     <properties>
-        <java.version>11</java.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <java.version>1.8</java.version>
+<!--        <maven.compiler.source>11</maven.compiler.source>-->
+<!--        <maven.compiler.target>11</maven.compiler.target>-->
     </properties>
 
     <build>
@@ -42,7 +42,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:m-pawelczyk/pp-pet-clinic.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>pp-pet-clinic-0.0.2</tag>
     </scm>
 
 </project>
