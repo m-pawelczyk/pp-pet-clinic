@@ -19,7 +19,9 @@
     <description>My Pet Clinic implementation (Spring 5 JAVA app example)</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
     <build>
