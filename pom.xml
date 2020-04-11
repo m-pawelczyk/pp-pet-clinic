@@ -14,7 +14,7 @@
     </parent>
     <groupId>pro.pawelczyk</groupId>
     <artifactId>pp-pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>pp-pet-clinic</name>
     <description>My Pet Clinic implementation (Spring 5 JAVA app example)</description>
 
@@ -42,7 +42,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:m-pawelczyk/pp-pet-clinic.git</developerConnection>
-        <tag>pp-pet-clinic-0.0.2</tag>
+        <tag>HEAD</tag>
     </scm>
 
 </project>
