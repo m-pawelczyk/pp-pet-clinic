@@ -10,11 +10,6 @@ import java.util.Set;
  * created VetService in pro.pawelczyk.pppetclinic.services
  * in project pp-pet-clinic
  */
-public interface VetService {
+public interface VetService extends CrudService<Vet, Long> {
 
-    Vet findById(Long id);
-
-    Vet save(Vet vet);
-
-    Set<Vet> findAll();
 }
