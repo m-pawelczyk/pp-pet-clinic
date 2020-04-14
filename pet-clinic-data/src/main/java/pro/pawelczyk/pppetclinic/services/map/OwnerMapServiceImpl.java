@@ -1,7 +1,7 @@
 package pro.pawelczyk.pppetclinic.services.map;
 
 import pro.pawelczyk.pppetclinic.model.Owner;
-import pro.pawelczyk.pppetclinic.services.CrudService;
+import pro.pawelczyk.pppetclinic.services.OwnerService;
 
 import java.util.Set;
 
@@ -11,7 +11,7 @@ import java.util.Set;
  * created OwnerMapServiceImpl in pro.pawelczyk.pppetclinic.services.map
  * in project pp-pet-clinic
  */
-public class OwnerMapServiceImpl extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerMapServiceImpl extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -35,5 +35,10 @@ public class OwnerMapServiceImpl extends AbstractMapService<Owner, Long> impleme
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }
