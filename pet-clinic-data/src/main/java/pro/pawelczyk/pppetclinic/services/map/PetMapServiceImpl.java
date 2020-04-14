@@ -1,5 +1,6 @@
 package pro.pawelczyk.pppetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import pro.pawelczyk.pppetclinic.model.Pet;
 import pro.pawelczyk.pppetclinic.services.CrudService;
 
@@ -11,6 +12,7 @@ import java.util.Set;
  * created PetMapServiceImpl in pro.pawelczyk.pppetclinic.services.map
  * in project pp-pet-clinic
  */
+@Service
 public class PetMapServiceImpl extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
 
     @Override

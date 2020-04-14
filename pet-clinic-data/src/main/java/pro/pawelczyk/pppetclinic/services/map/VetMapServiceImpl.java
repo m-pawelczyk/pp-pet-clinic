@@ -1,5 +1,6 @@
 package pro.pawelczyk.pppetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import pro.pawelczyk.pppetclinic.model.Vet;
 import pro.pawelczyk.pppetclinic.services.VetService;
 
@@ -11,6 +12,7 @@ import java.util.Set;
  * created VetMapServiceImpl in pro.pawelczyk.pppetclinic.services.map
  * in project pp-pet-clinic
  */
+@Service
 public class VetMapServiceImpl extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {

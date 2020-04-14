@@ -6,8 +6,6 @@ import pro.pawelczyk.pppetclinic.model.Owner;
 import pro.pawelczyk.pppetclinic.model.Vet;
 import pro.pawelczyk.pppetclinic.services.OwnerService;
 import pro.pawelczyk.pppetclinic.services.VetService;
-import pro.pawelczyk.pppetclinic.services.map.OwnerMapServiceImpl;
-import pro.pawelczyk.pppetclinic.services.map.VetMapServiceImpl;
 
 /**
  * m-pawelczyk (GitGub) / m_pawelczyk (Twitter)
@@ -21,9 +19,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerMapServiceImpl();
-        this.vetService = new VetMapServiceImpl();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
