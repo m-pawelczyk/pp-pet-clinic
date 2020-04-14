@@ -1,7 +1,9 @@
 package pro.pawelczyk.pppetclinic.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import pro.pawelczyk.pppetclinic.services.OwnerService;
 
 /**
  * m-pawelczyk (GitGub) / m_pawelczyk (Twitter)
@@ -12,8 +14,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class OwnersController {
 
+    private final OwnerService ownerService;
+
+    public OwnersController(OwnerService ownerService) {
+        this.ownerService = ownerService;
+    }
+
     @RequestMapping({"/owners", "/owners/index", "/owners/index.html"})
-    String listOwners() {
+    String listOwners(Model model) {
+
+        model.addAttribute("owners", ownerService.findAll());
 
         return "owners/index";
     }
