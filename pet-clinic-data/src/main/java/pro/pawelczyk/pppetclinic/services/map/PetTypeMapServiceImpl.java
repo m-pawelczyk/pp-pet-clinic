@@ -13,7 +13,7 @@ import java.util.Set;
  * in project pp-pet-clinic
  */
 @Service
-public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
+public class PetTypeMapServiceImpl extends AbstractMapService<PetType, Long> implements PetTypeService {
     @Override
     public Set<PetType> findAll() {
         return super.findAll();
