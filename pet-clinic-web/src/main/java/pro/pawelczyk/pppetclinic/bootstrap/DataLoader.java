@@ -3,11 +3,14 @@ package pro.pawelczyk.pppetclinic.bootstrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import pro.pawelczyk.pppetclinic.model.Owner;
+import pro.pawelczyk.pppetclinic.model.Pet;
 import pro.pawelczyk.pppetclinic.model.PetType;
 import pro.pawelczyk.pppetclinic.model.Vet;
 import pro.pawelczyk.pppetclinic.services.OwnerService;
 import pro.pawelczyk.pppetclinic.services.PetTypeService;
 import pro.pawelczyk.pppetclinic.services.VetService;
+
+import java.time.LocalDate;
 
 /**
  * m-pawelczyk (GitGub) / m_pawelczyk (Twitter)
@@ -42,17 +45,34 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("Anna");
         owner1.setLastName("Nowak");
+        owner1.setAddress("Stawowa 123");
+        owner1.setCity("Katowice");
+        owner1.setTelephone("123707070");
+
+        Pet annaDog = new Pet();
+        annaDog.setPetType(petType1);
+        annaDog.setOwner(owner1);
+        annaDog.setBirthDate(LocalDate.now());
+        annaDog.setName("Fryt");
+        owner1.getPets().add(annaDog);
+
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Zenon");
         owner2.setLastName("Radziwil");
-        ownerService.save(owner2);
+        owner2.setAddress("Wiejska 123");
+        owner2.setCity("Warszawa");
+        owner2.setTelephone("226956588");
 
-        Owner owner3 = new Owner();
-        owner3.setFirstName("Czesiek");
-        owner3.setLastName("Z Lasu");
-        ownerService.save(owner3);
+        Pet zenonCat = new Pet();
+        zenonCat.setPetType(petType2);
+        zenonCat.setOwner(owner2);
+        zenonCat.setBirthDate(LocalDate.now());
+        zenonCat.setName("Brudas");
+        owner2.getPets().add(zenonCat);
+
+        ownerService.save(owner2);
 
         System.out.println("Bootstrap loading Owners...");
 

@@ -2,7 +2,7 @@ package pro.pawelczyk.pppetclinic.services.map;
 
 import org.springframework.stereotype.Service;
 import pro.pawelczyk.pppetclinic.model.Pet;
-import pro.pawelczyk.pppetclinic.services.CrudService;
+import pro.pawelczyk.pppetclinic.services.PetService;
 
 import java.util.Set;
 
@@ -13,7 +13,7 @@ import java.util.Set;
  * in project pp-pet-clinic
  */
 @Service
-public class PetMapServiceImpl extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetMapServiceImpl extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Set<Pet> findAll() {
