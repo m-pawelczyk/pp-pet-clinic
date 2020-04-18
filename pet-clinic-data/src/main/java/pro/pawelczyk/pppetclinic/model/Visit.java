@@ -1,5 +1,6 @@
 package pro.pawelczyk.pppetclinic.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
 /**
@@ -8,10 +9,18 @@ import java.time.LocalDate;
  * created Visit in pro.pawelczyk.pppetclinic.model
  * in project pp-pet-clinic
  */
+@Entity
+@Table(name = "visits")
 public class Visit extends BaseEntity {
 
+    @Column(name = "date")
     private LocalDate localDate;
+
+    @Column(name = "description")
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "pet_id")
     private Pet pet;
 
     public LocalDate getLocalDate() {
