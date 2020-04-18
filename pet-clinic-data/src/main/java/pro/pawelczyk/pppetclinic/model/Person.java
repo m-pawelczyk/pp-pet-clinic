@@ -1,13 +1,21 @@
 package pro.pawelczyk.pppetclinic.model;
 
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+
 /**
  * m-pawelczyk (GitGub) / m_pawelczyk (Twitter)
  * on 11.04.2020
  * created Person in pro.pawelczyk.pppetclinic.model
  * in project pp-pet-clinic
  */
+@MappedSuperclass
 public class Person extends BaseEntity{
+
+    @Column(name = "first_name") // TODO: not needed Hibernate will do it in the same way, check it later in with Hibernate
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
 
     public String getFirstName() {
