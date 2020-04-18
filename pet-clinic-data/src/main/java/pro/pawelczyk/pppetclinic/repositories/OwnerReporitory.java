@@ -10,4 +10,6 @@ import pro.pawelczyk.pppetclinic.model.Owner;
  * in project pp-pet-clinic
  */
 public interface OwnerReporitory extends CrudRepository<Owner, Long> {
+
+    Owner findByLastName(String lastName);
 }
