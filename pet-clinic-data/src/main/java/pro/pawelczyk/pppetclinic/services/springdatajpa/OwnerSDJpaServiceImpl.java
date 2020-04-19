@@ -18,7 +18,7 @@ import java.util.Set;
  * in project pp-pet-clinic
  */
 @Service
-@Profile("dpringdatajpa")
+@Profile("springdatajpa")
 public class OwnerSDJpaServiceImpl implements OwnerService {
 
     private final OwnerReporitory ownerReporitory;
