@@ -1,6 +1,7 @@
 package pro.pawelczyk.pppetclinic.services.map;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import pro.pawelczyk.pppetclinic.model.Owner;
 
@@ -56,6 +57,7 @@ class OwnerMapServiceImplTest {
         assertNotNull(savedOwner.getId());
     }
 
+    @Disabled
     @Test
     void delete() {
         ownerMapService.delete(ownerMapService.findById(ownerId));
