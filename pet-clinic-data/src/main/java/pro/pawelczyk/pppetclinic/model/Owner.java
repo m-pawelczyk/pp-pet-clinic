@@ -15,8 +15,8 @@ import java.util.Set;
  * created Owner in pro.pawelczyk.pppetclinic.model
  * in project pp-pet-clinic
  */
-@Getter
 @Setter
+@Getter
 @NoArgsConstructor
 @Entity
 @Table(name = "owners")
@@ -29,6 +29,7 @@ public class Owner extends Person {
         this.address = address;
         this.city = city;
         this.telephone = telephone;
+        this.pets = pets;
     }
 
     @Column(name = "address")
