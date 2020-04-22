@@ -57,7 +57,6 @@ class OwnerMapServiceImplTest {
         assertNotNull(savedOwner.getId());
     }
 
-    @Disabled
     @Test
     void delete() {
         ownerMapService.delete(ownerMapService.findById(ownerId));
