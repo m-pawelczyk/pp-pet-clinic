@@ -8,6 +8,7 @@ import pro.pawelczyk.pppetclinic.services.OwnerService;
 import pro.pawelczyk.pppetclinic.services.PetService;
 import pro.pawelczyk.pppetclinic.services.PetTypeService;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -84,5 +85,12 @@ public class OwnerMapServiceImpl extends AbstractMapService<Owner, Long> impleme
                 .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
                 .findFirst()
                 .orElse(null);
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+
+        /// TODO - implementation
+        return null;
     }
 }

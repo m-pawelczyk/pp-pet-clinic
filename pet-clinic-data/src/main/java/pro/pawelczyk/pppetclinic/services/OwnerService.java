@@ -2,7 +2,7 @@ package pro.pawelczyk.pppetclinic.services;
 
 import pro.pawelczyk.pppetclinic.model.Owner;
 
-import java.util.Set;
+import java.util.List;
 
 /**
  * m-pawelczyk (GitGub) / m_pawelczyk (Twitter)
@@ -13,4 +13,6 @@ import java.util.Set;
 public interface OwnerService extends CrudService<Owner, Long> {
 
     Owner findByLastName(String lastName);
+
+    List<Owner> findAllByLastNameLike(String lastName);
 }

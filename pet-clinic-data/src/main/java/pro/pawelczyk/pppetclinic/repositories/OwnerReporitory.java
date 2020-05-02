@@ -3,6 +3,8 @@ package pro.pawelczyk.pppetclinic.repositories;
 import org.springframework.data.repository.CrudRepository;
 import pro.pawelczyk.pppetclinic.model.Owner;
 
+import java.util.List;
+
 /**
  * m-pawelczyk (GitGub) / m_pawelczyk (Twitter)
  * on 18.04.2020
@@ -12,4 +14,6 @@ import pro.pawelczyk.pppetclinic.model.Owner;
 public interface OwnerReporitory extends CrudRepository<Owner, Long> {
 
     Owner findByLastName(String lastName);
+
+    List<Owner> findAllByLastNameLike(String lastName);
 }

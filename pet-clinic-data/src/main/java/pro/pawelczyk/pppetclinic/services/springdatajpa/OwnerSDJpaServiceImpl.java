@@ -9,6 +9,7 @@ import pro.pawelczyk.pppetclinic.repositories.PetTypeRepository;
 import pro.pawelczyk.pppetclinic.services.OwnerService;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -35,6 +36,11 @@ public class OwnerSDJpaServiceImpl implements OwnerService {
     @Override
     public Owner findByLastName(String lastName) {
         return ownerReporitory.findByLastName(lastName);
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        return ownerReporitory.findAllByLastNameLike(lastName);
     }
 
     @Override
